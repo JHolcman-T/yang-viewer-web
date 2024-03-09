@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/*!
+ * CSS module for Yang Tree Viewer component
+ * styles.module.css
+ * Licensed under the GPLv3 license LICENSE file in the root directory of this source tree
+ * E-mail: kontakt@jakub-holcman.com
+ * Copyright (c) 2024 Jakub Holcman
+ */
+
+:root {
+  /* You can replace the values with your own */
+  /* Pre-set values come from docusaurus documentation framework - https://docusaurus.io */
+  --yang-viewer-border-color: var(--ifm-color-emphasis-300);
+  --yang-viewer-bg-color: var(--ifm-background-color);
+
+  --yang-viewer-hover-color: var(--ifm-link-hover-color);
+  --yang-viewer-active-color: var(--yang-viewer-hover-color);
+}
+
+* {
+  transition: border-color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.tree-viewer {
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--yang-viewer-border-color);
+}
+
+.tree-node {
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--yang-viewer-border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.node-info {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.node-info-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.node-details-btn:hover {
+  cursor: pointer;
+  border-color: var(--yang-viewer-hover-color);
+  color: var(--yang-viewer-hover-color);
+}
+
+.tree-node[has-children="true"]:has(.node-info:hover) {
+  border-color: var(--yang-viewer-hover-color);
+}
+.tree-node[has-children="true"] .node-info:hover {
+  cursor: pointer;
+  color: var(--yang-viewer-hover-color);
+}
+
+.tree-node[has-children="true"] .node-identifier:hover,
+.tree-node[has-children="true"] .node-icon:hover {
+  cursor: pointer;
+}
+
+.node-identifier {
+  text-align: left;
+  border-style: hidden;
+  outline: none;
+  flex-grow: 1;
+  cursor: default;
+}
+
+.node-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-color: var(--yang-viewer-border-color);
+  cursor: default;
+}
+
+.node-details-btn {
+  text-align: center;
+  border-style: hidden;
+  font-size: 1.5rem;
+  outline: none;
+  width: 60px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: var(--yang-viewer-bg-color);
+  border-color: var(--yang-viewer-border-color);
+}
+
+.tree-nodes {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 850px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  border-bottom: 1px solid var(--yang-viewer-border-color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+/* Chrome, Safari and Opera */
+.nav-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.path-element {
+  width: fit-content;
+  border: 1px solid var(--yang-viewer-border-color);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.path-element-text {
+  min-width: 75px;
+  font-size: 1rem;
+  border-style: hidden;
+  outline: none;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.path-element:hover {
+  cursor: pointer;
+  border-color: var(--yang-viewer-hover-color);
+  color: var(--yang-viewer-hover-color);
+}
+
+.path-element:hover .path-element-text {
+  color: var(--yang-viewer-hover-color);
+}
+
+.path-element[active="true"] {
+  border-color: var(--yang-viewer-active-color);
+  color: var(--yang-viewer-active-color);
+  pointer-events: none;
+}
