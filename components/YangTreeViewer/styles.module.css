@@ -16,6 +16,21 @@
 
   --yang-viewer-hover-color: var(--ifm-link-hover-color, green);
   --yang-viewer-active-color: var(--yang-viewer-hover-color, green);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    border: 1px solid;
+    border-color: var(--yang-viewer-border-color);
+    padding: 16px;
+  }
+  tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  line-height: 1.5rem;
 }
 
 * {
