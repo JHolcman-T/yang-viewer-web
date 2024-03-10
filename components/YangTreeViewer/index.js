@@ -102,7 +102,27 @@ function TreeNode({nodeData, goToFn}) {
 
   const scroll = () => {
     if (folded) {
-      elementRef.current.parentNode.scrollTop = elementRef.current.offsetTop - 300
+      // ***Fix for smooth scrolling***
+      //
+      // Description:
+      // enabling both scroll sanpping and scroll behavior "smooth"
+      // results with not working smooth scrolling while jumping to an element in the list.
+      //
+      // Steps:
+      // 1. Disable snapping
+      // 2. Scroll to element smoothly
+      // 3. Enable snapping after 500ms (wait for animation to end)
+      elementRef.current.parentNode.style["scroll-snap-type"] = "initial"
+      elementRef.current.parentNode.scrollTo({
+        // Values:
+        // treeNodeOffsetTop - treeNodesContainerOffsetTop - padding between nodes
+        top: elementRef.current.offsetTop - elementRef.current.parentNode.offsetTop - 20,
+        left: 0,
+        behavior: "smooth",
+      })
+      setTimeout(() => {
+        elementRef.current.parentNode.style["scroll-snap-type"] = "y proximity"
+      }, 500)
     }
   }
 

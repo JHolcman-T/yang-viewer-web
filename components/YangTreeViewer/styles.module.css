@@ -38,6 +38,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 }
 
 .node-info {
@@ -119,6 +121,9 @@
   max-height: 850px;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-padding: 20px;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 .nav-bar {
