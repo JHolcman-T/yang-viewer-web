@@ -11,11 +11,11 @@
 :root {
   /* You can replace the values with your own */
   /* Pre-set values come from docusaurus documentation framework - https://docusaurus.io */
-  --yang-viewer-border-color: var(--ifm-color-emphasis-300);
-  --yang-viewer-bg-color: var(--ifm-background-color);
+  --yang-viewer-border-color: var(--ifm-color-emphasis-300, #7f7f7f);
+  --yang-viewer-bg-color: var(--ifm-background-color, white);
 
-  --yang-viewer-hover-color: var(--ifm-link-hover-color);
-  --yang-viewer-active-color: var(--yang-viewer-hover-color);
+  --yang-viewer-hover-color: var(--ifm-link-hover-color, green);
+  --yang-viewer-active-color: var(--yang-viewer-hover-color, green);
 }
 
 * {
