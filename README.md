@@ -13,7 +13,7 @@ _Developed primarily for use with [docusaurus] docs framework._
 - Generate json formatted data.
 - Embed the component on your page.
 
-**Embed exaple in a .mdx file**
+**Embed example in a .mdx file**
 
 ```mdx
 import YangTreeViewer from "./components/YangTreeViewer"
