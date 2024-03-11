@@ -1,6 +1,6 @@
 {
   "name": "@jakubholcman/yang-tree-viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Web component for displaying YANG schema contents.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
