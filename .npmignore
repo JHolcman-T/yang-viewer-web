@@ -1,0 +1,13 @@
+# src and project setup
+src
+rollup.config.js
+tsconfig.json
+
+
+# modules
+node_modules
+package-lock.json
+
+# git related
+.git
+.gitignore

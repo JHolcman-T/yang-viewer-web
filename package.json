@@ -1,0 +1,51 @@
+{
+  "name": "@jakubholcman/yang-tree-viewer",
+  "version": "0.0.1",
+  "description": "Web component for displaying YANG schema contents.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs"
+  },
+  "keywords": [
+    "YANG",
+    "schema",
+    "tree",
+    "viewer",
+    "react",
+    "component"
+  ],
+  "author": {
+    "name": "Jakub Mirosław Holcman",
+    "email": "kontakt@jakub-holcman.com",
+    "url": "https://github.com/JHolcman-T"
+  },
+  "homepage": "https://github.com/JHolcman-T/yang-viewer-web",
+  "license": "GPLv3",
+  "devDependencies": {
+    "@formkit/auto-animate": "^0.8.1",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.61",
+    "react": "^18.2.0",
+    "rollup": "^4.12.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "2.6.2",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.1",
+    "@types/react": "^18.2.61",
+    "react": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@formkit/auto-animate": "^0.8.1",
+    "@types/react": "^18.2.61",
+    "react": "^18.2.0"
+  }
+}

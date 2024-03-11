@@ -16,7 +16,9 @@
 
   --yang-viewer-hover-color: var(--ifm-link-hover-color, green);
   --yang-viewer-active-color: var(--yang-viewer-hover-color, green);
+}
 
+:root:has(.tree-viewer[css="standard"]) {
   font-family: Arial, Helvetica, sans-serif;
 
   table {
@@ -26,6 +28,9 @@
     border: 1px solid;
     border-color: var(--yang-viewer-border-color);
     padding: 16px;
+  }
+  tr {
+    background-color: transparent;
   }
   tr:nth-child(even) {
     background-color: #f7f7f7;
@@ -55,6 +60,8 @@
   gap: 20px;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .node-info {

@@ -16,10 +16,10 @@ _Developed primarily for use with [docusaurus] docs framework._
 **Embed example in a .mdx file**
 
 ```mdx
-import YangTreeViewer from "./components/YangTreeViewer"
+import {YangTreeViewer} from "yang-tree-viewer"
 import data from "./src/data/example-data.json"
 
-<YangTreeViewer tree={data} sm-sort="true"></YangTreeViewer>
+<YangTreeViewer tree={data} sm-sort="true" css="standard"></YangTreeViewer>
 ```
 
 ## Screens
