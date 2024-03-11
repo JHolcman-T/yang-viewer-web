@@ -224,8 +224,8 @@ function TreeNode({nodeData, goToFn}: {nodeData: Module | CommonNode; goToFn: Fu
         <button
           className={styles["node-details-btn"]}
           onClick={() => {
-            scroll()
             setFolded(!folded)
+            scroll()
           }}
         >
           {folded ? "🔽" : "🔼"}
